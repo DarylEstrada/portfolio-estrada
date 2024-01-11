@@ -38,6 +38,18 @@ body {
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
+.glass-no-radius {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
 .background {
   background: linear-gradient(90deg, #0f0f0f 0%, rgba(78, 78, 78, 0) 347.86%);
 }
@@ -83,4 +95,8 @@ body {
 }
 .spin {
   animation: spinFrames 10s linear infinite;
+}
+
+.custom-duration {
+  transition-duration: 1500ms;
 }

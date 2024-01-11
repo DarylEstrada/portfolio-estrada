@@ -16,11 +16,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
-      />
-
       <body
         className={`${sp.className}  flex flex-col items-center bg-[url('/imgs/stars.png')] bg-center bg-no-repeat w-full overflow-hidden`}
       >

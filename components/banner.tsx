@@ -5,7 +5,11 @@ import { Tilt } from "react-tilt";
 import TiltedCard from "./tilted-card";
 import IconContainer from "./test";
 
-export default function Banner() {
+interface BannerProps {
+  onClick: (isClicked: boolean) => void;
+}
+
+export default function Banner({ onClick }: BannerProps) {
   const defaultOptions = {
     reverse: false, // reverse the tilt direction
     max: 35, // max tilt rotation (degrees)
@@ -54,7 +58,7 @@ export default function Banner() {
 
   return (
     <>
-      <div className=" w-full h-[500px] p-[20px] flex items-center justify-between gap-[50px]">
+      <div className=" w-full h-[500px] p-[20px] flex flex-col xl:flex-row items-center  gap-[50px]">
         <div>
           <div className="leading-[65px]">
             <p className="text-[30px] font-semibold">Hi, I'm</p>
@@ -71,7 +75,7 @@ export default function Banner() {
           </div>
 
           <div className="w-full flex items-center justify-center mt-[100px]">
-            <div>
+            <div onClick={() => onClick(true)}>
               <Tilt>
                 <div className="glass rounded-[20px] px-[50px] py-[15px] text-center cursor-pointer glow hover:bg-[#7db1f5] hover:text-black">
                   EXPLORE
