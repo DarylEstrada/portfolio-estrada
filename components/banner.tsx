@@ -61,7 +61,7 @@ export default function Banner({ onClick }: BannerProps) {
       <div className=" w-full h-[500px] p-[20px] flex flex-col xl:flex-row items-center  gap-[50px]">
         <div>
           <div className="leading-[65px]">
-            <p className="text-[30px] font-semibold">Hi, I'm</p>
+            <p className="text-[30px] font-semibold">Hi, I&apos;m</p>
             <div className="w-[752px]">
               <Tilt options={defaultOptions}>
                 <p className="text-[90px] font-bold mb-[20px] glass p-[20px] w-[725px] cursor-pointer glow">
@@ -70,7 +70,7 @@ export default function Banner({ onClick }: BannerProps) {
               </Tilt>
             </div>
             <p className="text-[50px] font-semibold typing-demo  flex items-center">
-              I'm a Fullstack Web Developer
+              I&apos;m a Fullstack Web Developer
             </p>
           </div>
 
@@ -99,7 +99,7 @@ export default function Banner({ onClick }: BannerProps) {
               Unveiling a world of innovation, design, and creativity. Dive into
               a symphony of artistry and functionality where pixels meet
               purpose. Explore my portfolio and witness the fusion of passion
-              and precision. Let's craft stories, shape experiences, and
+              and precision. Let&apos;s craft stories, shape experiences, and
               redefine possibilities together.
             </p>
           </div>
@@ -114,8 +114,8 @@ export default function Banner({ onClick }: BannerProps) {
                   <Image
                     src={project.src}
                     alt={""}
-                    width={200}
-                    height={100}
+                    width={1182}
+                    height={400}
                     className="object-cover rounded-[20px] w-[200px] h-[100px]"
                   />
 
