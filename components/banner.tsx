@@ -75,7 +75,9 @@ export default function Banner({ onClick }: BannerProps) {
           </div>
 
           <div className="w-full flex items-center justify-center mt-[100px]">
-            <div onClick={() => onClick(true)}>
+            <div
+            // onClick={() => onClick(true)}
+            >
               <Tilt>
                 <div className="glass rounded-[20px] px-[50px] py-[15px] text-center cursor-pointer glow hover:bg-[#7db1f5] hover:text-black">
                   EXPLORE
@@ -85,24 +87,24 @@ export default function Banner({ onClick }: BannerProps) {
           </div>
         </div>
         <div className=" w-full flex flex-col gap-[30px] ">
-          <div className="flex flex-col gap-[20px] glass p-[50px] glow">
-            {/* <div className="cursor-grab animate-bounce rounded-full">
+          {/* <div className="flex flex-col gap-[20px] glass p-[50px] glow"> */}
+          {/* <div className="cursor-grab animate-bounce rounded-full">
             <Draggable>
               <LocateFixed width={50} height={50} />
             </Draggable>
           </div> */}
-            <p className="text-[60px] max-w-[600px] w-full font-bold leading-[60px]">
+          {/* <p className="text-[60px] max-w-[600px] w-full font-bold leading-[60px]">
               Welcome to My Creative Universe!
-            </p>
+            </p> */}
 
-            <p className="text-[25px] text-justify max-w-[1000px]">
+          {/* <p className="text-[25px] text-justify max-w-[1000px]">
               Unveiling a world of innovation, design, and creativity. Dive into
               a symphony of artistry and functionality where pixels meet
               purpose. Explore my portfolio and witness the fusion of passion
               and precision. Let&apos;s craft stories, shape experiences, and
               redefine possibilities together.
-            </p>
-          </div>
+            </p> */}
+          {/* </div> */}
           <p className="text-[30px]">PROJECTS:</p>
           <div className="flex flex-wrap gap-[20px] justify-center">
             {projects.map((project, index) => (

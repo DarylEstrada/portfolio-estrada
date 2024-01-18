@@ -24,20 +24,20 @@ export default function Home() {
   };
 
   return (
-    <main className=" relative background max-w-[1920px]  w-screen h-screen overflow-hidden flex flex-col justify-center items-center ">
+    <main className=" relative background max-w-[1920px] w-screen h-screen overflow-hidden flex flex-col justify-center items-center ">
       {/* <div className="relative z-[1] flex items-center"> */}
 
       <div className="h-[1080px] w-full overflow-hidden flex flex-col justify-center py-[100px] px-[50px]">
         <div
           className={`transition-transform transform custom-duration ease-out ${
-            bannerClick ? "-translate-y-[300px]" : "translate-y-[750px]"
+            bannerClick ? "-translate-y-[300px]" : "translate-y-[0px]"
           }
         `}
         >
           <Banner onClick={onClickBanner} />
         </div>
 
-        <div
+        {/* <div
           className={`transition-transform transform custom-duration ease-out ${
             bannerClick
               ? `${
@@ -73,7 +73,7 @@ export default function Home() {
             />
             <BrickBreaker />
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* <div className="glass p-[10px] h-[700px] w-full">
