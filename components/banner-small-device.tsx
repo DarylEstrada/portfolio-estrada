@@ -61,7 +61,9 @@ export default function BannerSmall({ onClick }: BannerProps) {
       <div className=" w-full h-full p-[20px] flex flex-col  items-center  gap-[0px] md:gap-[50px]">
         <div className="p-[0px] pt-[50px] min-[560px]:p-[50px] pb-[0px] min-[1440px]:py-[200px]">
           <div className="md:leading-[65px] flex flex-col text-center md:text-start gap-[20px]">
-            <p className="text-[20px] md:text-[30px] font-semibold">Hi, I'm</p>
+            <p className="text-[20px] md:text-[30px] font-semibold">
+              Hi, I&apos;m
+            </p>
             <div className="flex items-center justify-center">
               <Tilt options={defaultOptions}>
                 <p className="text-[50px] md:text-[90px] font-bold md:mb-[20px] glass py-[5px] px-[15px] md:p-[20px]  cursor-pointer glow">
@@ -70,7 +72,7 @@ export default function BannerSmall({ onClick }: BannerProps) {
               </Tilt>
             </div>
             <p className="text-[25px] md:text-[50px] font-semibold lg:typing-demo  flex justify-center">
-              I'm a Fullstack Web Developer
+              I&apos;m a Fullstack Web Developer
             </p>
           </div>
 
@@ -94,7 +96,7 @@ export default function BannerSmall({ onClick }: BannerProps) {
               Unveiling a world of innovation, design, and creativity. Dive into
               a symphony of artistry and functionality where pixels meet
               purpose. Explore my portfolio and witness the fusion of passion
-              and precision. Let's craft stories, shape experiences, and
+              and precision. Let&apos;s craft stories, shape experiences, and
               redefine possibilities together.
             </p>
           </div>
