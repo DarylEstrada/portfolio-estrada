@@ -1,6 +1,7 @@
 "use client";
 
 import Banner from "@/components/banner";
+import BannerSmall from "@/components/banner-small-device";
 import BrickBreaker from "@/components/brick-breaker";
 import WhatIDo from "@/components/what-i-do";
 import Image from "next/image";
@@ -17,6 +18,7 @@ export default function Home() {
 
   const onClickWhatIDo = (isClicked: boolean) => {
     setWhatIDoclick(isClicked);
+    setBannerClick(false);
   };
 
   const onClickWhatIDoBack = (isClicked: boolean) => {
@@ -24,26 +26,22 @@ export default function Home() {
   };
 
   return (
-    <main className=" relative background max-w-[1920px] w-screen h-screen overflow-hidden flex flex-col justify-center items-center ">
+    <main className=" relative background max-w-[1920px]  w-screen h-screen overflow-hidden flex flex-col justify-center items-center ">
       {/* <div className="relative z-[1] flex items-center"> */}
 
-      <div className="h-[1080px] w-full overflow-hidden flex flex-col justify-center py-[100px] px-[50px]">
+      <div className="h-[1080px] w-full  flex-col justify-center overflow-hidden py-[100px] px-[50px] hidden min-[1920px]:flex">
         <div
           className={`transition-transform transform custom-duration ease-out ${
-            bannerClick ? "-translate-y-[300px]" : "translate-y-[0px]"
+            bannerClick ? "-translate-y-[1000px]" : "translate-y-[370px]"
           }
         `}
         >
           <Banner onClick={onClickBanner} />
         </div>
 
-        {/* <div
+        <div
           className={`transition-transform transform custom-duration ease-out ${
-            bannerClick
-              ? `${
-                  whatIDoclick ? "-translate-y-[1000px]" : "translate-y-[120px]"
-                }`
-              : "translate-y-[1200px]"
+            bannerClick ? `-translate-y-[250px]` : "translate-y-[1000px]"
           }
         `}
         >
@@ -55,25 +53,10 @@ export default function Home() {
             <BrickBreaker />
           </div>
         </div>
+      </div>
 
-        <div
-          className={`transition-transform transform custom-duration ease-out ${
-            bannerClick
-              ? `${
-                  whatIDoclick ? "-translate-y-[630px]" : "translate-y-[500px]"
-                }`
-              : "translate-y-[1200px]"
-          }
-        `}
-        >
-          <div className="flex w-full items-center justify-between px-[100px]">
-            <WhatIDo
-              onClick={onClickWhatIDo}
-              onClickBack={onClickWhatIDoBack}
-            />
-            <BrickBreaker />
-          </div>
-        </div> */}
+      <div className="flex h-full w-full overflow-scroll min-[1920px]:hidden">
+        <BannerSmall onClick={onClickBanner} />
       </div>
 
       {/* <div className="glass p-[10px] h-[700px] w-full">

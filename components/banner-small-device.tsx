@@ -9,7 +9,7 @@ interface BannerProps {
   onClick: (isClicked: boolean) => void;
 }
 
-export default function Banner({ onClick }: BannerProps) {
+export default function BannerSmall({ onClick }: BannerProps) {
   const defaultOptions = {
     reverse: false, // reverse the tilt direction
     max: 35, // max tilt rotation (degrees)
@@ -58,23 +58,23 @@ export default function Banner({ onClick }: BannerProps) {
 
   return (
     <>
-      <div className=" w-full h-[500px] p-[20px] flex flex-col xl:flex-row items-center  gap-[50px]">
-        <div>
-          <div className="leading-[65px]">
-            <p className="text-[30px] font-semibold">Hi, I&apos;m</p>
-            <div className="w-[752px]">
+      <div className=" w-full h-full p-[20px] flex flex-col  items-center  gap-[0px] md:gap-[50px]">
+        <div className="p-[0px] pt-[50px] min-[560px]:p-[50px] pb-[0px] min-[1440px]:py-[200px]">
+          <div className="md:leading-[65px] flex flex-col text-center md:text-start gap-[20px]">
+            <p className="text-[20px] md:text-[30px] font-semibold">Hi, I'm</p>
+            <div className="flex items-center justify-center">
               <Tilt options={defaultOptions}>
-                <p className="text-[90px] font-bold mb-[20px] glass p-[20px] w-[725px] cursor-pointer glow">
+                <p className="text-[50px] md:text-[90px] font-bold md:mb-[20px] glass py-[5px] px-[15px] md:p-[20px]  cursor-pointer glow">
                   DARYL ESTRADA
                 </p>
               </Tilt>
             </div>
-            <p className="text-[50px] font-semibold typing-demo  flex items-center">
-              I&apos;m a Fullstack Web Developer
+            <p className="text-[25px] md:text-[50px] font-semibold lg:typing-demo  flex justify-center">
+              I'm a Fullstack Web Developer
             </p>
           </div>
 
-          <div className="w-full flex items-center justify-center mt-[100px]">
+          <div className="w-full hidden min-[1440px]:flex items-center justify-center mt-[100px]">
             <div onClick={() => onClick(true)}>
               <Tilt>
                 <div className="glass rounded-[20px] px-[50px] py-[15px] text-center cursor-pointer glow hover:bg-[#7db1f5] hover:text-black">
@@ -84,22 +84,17 @@ export default function Banner({ onClick }: BannerProps) {
             </div>
           </div>
         </div>
-        <div className=" w-full flex flex-col gap-[30px] ">
-          <div className="flex flex-col gap-[20px] glass p-[50px] glow">
-            {/* <div className="cursor-grab animate-bounce rounded-full">
-            <Draggable>
-              <LocateFixed width={50} height={50} />
-            </Draggable>
-          </div> */}
-            <p className="text-[60px] max-w-[600px] w-full font-bold leading-[60px]">
+        <div className=" w-full flex flex-col gap-[30px] p-[0px] min-[560px]:p-[50px] pt-[20px] lg:p-[150px]">
+          <div className="flex flex-col gap-[20px] glass p-[20px] min-[560px]:p-[50px] glow">
+            <p className="text-[30px] md:text-[60px] max-w-[600px] w-full font-bold md:leading-[60px]">
               Welcome to My Creative Universe!
             </p>
 
-            <p className="text-[25px] text-justify max-w-[1000px]">
+            <p className=" text-[15px] md:text-[25px] text-justify max-w-[1000px]">
               Unveiling a world of innovation, design, and creativity. Dive into
               a symphony of artistry and functionality where pixels meet
               purpose. Explore my portfolio and witness the fusion of passion
-              and precision. Let&apos;s craft stories, shape experiences, and
+              and precision. Let's craft stories, shape experiences, and
               redefine possibilities together.
             </p>
           </div>
@@ -114,8 +109,8 @@ export default function Banner({ onClick }: BannerProps) {
                   <Image
                     src={project.src}
                     alt={""}
-                    width={1182}
-                    height={400}
+                    width={200}
+                    height={100}
                     className="object-cover rounded-[20px] w-[200px] h-[100px]"
                   />
 

@@ -56,17 +56,17 @@ export default function WhatIDo({ onClick, onClickBack }: WhatIDoProps) {
         <div onClick={() => onClick(true)}>
           <Tilt>
             <div className="glass rounded-[20px] px-[50px] py-[15px] text-center cursor-pointer glow hover:bg-[#7db1f5] hover:text-black">
-              EXPLORE
+              Back
             </div>
           </Tilt>
         </div>
-        <div onClick={() => onClickBack(true)}>
+        {/* <div onClick={() => onClickBack(false)}>
           <Tilt>
             <div className="glass rounded-[20px] px-[50px] py-[15px] text-center cursor-pointer glow hover:bg-[#7db1f5] hover:text-black">
               BACK
             </div>
           </Tilt>
-        </div>
+        </div> */}
       </div>
     </div>
   );
