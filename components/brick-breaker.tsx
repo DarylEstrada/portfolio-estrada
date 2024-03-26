@@ -143,11 +143,8 @@ const BrickBreaker: React.FC = () => {
   }, [displayRestartBtn]);
 
   return (
-    <div className="flex flex-col items-center gap-[20px]">
-      <p className="text-center text-[20px] max-w-[500px]">
-        Take a break play some classic arcade game, made with Javascript, HTML
-        and CSS.
-      </p>
+    <div className="flex flex-col  gap-[20px]">
+      <p className="text-2xl font-bold text-start">Brick Breaker Game</p>
       <div className="relative flex items-center justify-center glass p-[20px] w-[440px] h-[640px] glow">
         {displayRestartBtn && (
           <div className="absolute flex items-center justify-center  backdrop-blur-[5px] h-[600px] w-[400px] rounded-[20px] text-[12px] ">

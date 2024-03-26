@@ -3,9 +3,11 @@
 import Banner from "@/components/banner";
 import BannerSmall from "@/components/banner-small-device";
 import BrickBreaker from "@/components/brick-breaker";
+import Test from "@/components/test";
 import WhatIDo from "@/components/what-i-do";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { RecoilRoot } from "recoil";
 
 export default function Home() {
   const [bannerClick, setBannerClick] = useState(false);
@@ -26,40 +28,41 @@ export default function Home() {
   };
 
   return (
-    <main className=" relative background max-w-[1920px]  w-screen h-screen overflow-hidden flex flex-col justify-center items-center ">
-      {/* <div className="relative z-[1] flex items-center"> */}
+    <RecoilRoot>
+      <main className=" relative background max-w-[1920px]  w-screen h-screen overflow-hidden flex flex-col justify-center items-center ">
+        {/* <div className="relative z-[1] flex items-center"> */}
 
-      <div className="h-[1080px] w-full  flex-col justify-center overflow-hidden py-[100px] px-[50px] hidden min-[1920px]:flex">
-        <div
-          className={`transition-transform transform custom-duration ease-out ${
-            bannerClick ? "-translate-y-[1000px]" : "translate-y-[370px]"
-          }
+        <div className="h-[1080px] w-full  flex-col justify-center overflow-hidden py-[100px] px-[50px] hidden min-[1920px]:flex">
+          <div
+            className={`transition-transform transform custom-duration ease-out ${
+              bannerClick ? "-translate-y-[1000px]" : "translate-y-[370px]"
+            }
         `}
-        >
-          <Banner onClick={onClickBanner} />
-        </div>
+          >
+            <Banner onClick={onClickBanner} />
+          </div>
 
-        <div
-          className={`transition-transform transform custom-duration ease-out ${
-            bannerClick ? `-translate-y-[250px]` : "translate-y-[1000px]"
-          }
+          <div
+            className={`transition-transform transform custom-duration ease-out ${
+              bannerClick ? `-translate-y-[250px]` : "translate-y-[1000px]"
+            }
         `}
-        >
-          <div className="flex w-full items-center justify-between px-[100px]">
-            <WhatIDo
-              onClick={onClickWhatIDo}
-              onClickBack={onClickWhatIDoBack}
-            />
-            <BrickBreaker />
+          >
+            <div className="flex w-full items-center justify-between px-[100px]">
+              <WhatIDo
+                onClick={onClickWhatIDo}
+                onClickBack={onClickWhatIDoBack}
+              />
+              {/* <BrickBreaker /> */}
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="flex h-full w-full overflow-scroll min-[1920px]:hidden">
-        <BannerSmall onClick={onClickBanner} />
-      </div>
+        <div className="flex h-full w-full overflow-scroll min-[1920px]:hidden">
+          <BannerSmall onClick={onClickBanner} />
+        </div>
 
-      {/* <div className="glass p-[10px] h-[700px] w-full">
+        {/* <div className="glass p-[10px] h-[700px] w-full">
           <div className="cursor-grab animate-bounce rounded-full">
             <Draggable>
               <LocateFixed width={50} height={50} />
@@ -123,6 +126,7 @@ export default function Home() {
           </Draggable>
         </div>
       </div> */}
-    </main>
+      </main>
+    </RecoilRoot>
   );
 }

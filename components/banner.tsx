@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Tilt } from "react-tilt";
 import TiltedCard from "./tilted-card";
 import IconContainer from "./test";
-
+import Test from "./test";
 interface BannerProps {
   onClick: (isClicked: boolean) => void;
 }
@@ -53,6 +53,9 @@ export default function Banner({ onClick }: BannerProps) {
   ];
 
   const onNavigate = (url: string) => {
+    if (url === "/components") {
+      return window.open(url);
+    }
     return window.open(url, "_blank");
   };
 
@@ -64,7 +67,7 @@ export default function Banner({ onClick }: BannerProps) {
             <p className="text-[30px] font-semibold">Hi, I&apos;m</p>
             <div className="w-[752px]">
               <Tilt options={defaultOptions}>
-                <p className="text-[90px] font-bold mb-[20px] glass p-[20px] w-[725px] cursor-pointer glow">
+                <p className=" text-[90px] font-bold mb-[20px] glass p-[20px] w-[725px] cursor-pointer glow">
                   DARYL ESTRADA
                 </p>
               </Tilt>
@@ -74,11 +77,18 @@ export default function Banner({ onClick }: BannerProps) {
             </p>
           </div>
 
-          <div className="w-full flex items-center justify-center mt-[100px]">
+          <div className="w-full flex items-center gap-[50px] justify-center mt-[100px]">
             <div onClick={() => onClick(true)}>
               <Tilt>
                 <div className="glass rounded-[20px] px-[50px] py-[15px] text-center cursor-pointer glow hover:bg-[#7db1f5] hover:text-black">
                   EXPLORE
+                </div>
+              </Tilt>
+            </div>
+            <div onClick={() => onNavigate("/components")}>
+              <Tilt>
+                <div className="glass rounded-[20px] px-[50px] py-[15px] text-center cursor-pointer glow hover:bg-[#7db1f5] hover:text-black">
+                  COMPONENTS
                 </div>
               </Tilt>
             </div>
@@ -104,6 +114,7 @@ export default function Banner({ onClick }: BannerProps) {
             </p>
           </div>
           <p className="text-[30px]">PROJECTS:</p>
+
           <div className="flex flex-wrap gap-[20px] justify-center">
             {projects.map((project, index) => (
               <Tilt key={index}>

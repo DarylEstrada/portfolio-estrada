@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Tilt } from "react-tilt";
 import TiltedCard from "./tilted-card";
 import IconContainer from "./test";
+import Test from "./test";
 
 interface BannerProps {
   onClick: (isClicked: boolean) => void;
@@ -124,6 +125,7 @@ export default function BannerSmall({ onClick }: BannerProps) {
               </Tilt>
             ))}
           </div>
+          <Test />
         </div>
       </div>
     </>
