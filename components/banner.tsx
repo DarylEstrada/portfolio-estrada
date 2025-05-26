@@ -50,6 +50,18 @@ export default function Banner({ onClick }: BannerProps) {
       src: "/imgs/truspace.png",
       link: "https://truspace.com/",
     },
+    {
+      title: "GoHealth Urgent Care",
+      company: "GoHealthUC",
+      src: "/imgs/gohealth.png",
+      link: "https://www.gohealthuc.com/",
+    },
+    {
+      title: "Navix Hub™",
+      company: "Guerilla 360",
+      src: "/imgs/navix.webp",
+      link: "https://navixhealth.com/",
+    },
   ];
 
   const onNavigate = (url: string) => {
@@ -95,17 +107,17 @@ export default function Banner({ onClick }: BannerProps) {
           </div>
         </div>
         <div className=" w-full flex flex-col gap-[30px] ">
-          <div className="flex flex-col gap-[20px] glass p-[50px] glow">
+          <div className="flex flex-col gap-[20px] glass p-[30px] glow h-[300px]">
             {/* <div className="cursor-grab animate-bounce rounded-full">
             <Draggable>
               <LocateFixed width={50} height={50} />
             </Draggable>
           </div> */}
-            <p className="text-[60px] max-w-[600px] w-full font-bold leading-[60px]">
+            <p className="text-[50px]  w-full font-bold leading-[60px]">
               Welcome to My Creative Universe!
             </p>
 
-            <p className="text-[25px] text-justify max-w-[1000px]">
+            <p className="text-[24px] text-justify max-w-[1000px]">
               Unveiling a world of innovation, design, and creativity. Dive into
               a symphony of artistry and functionality where pixels meet
               purpose. Explore my portfolio and witness the fusion of passion
@@ -115,7 +127,7 @@ export default function Banner({ onClick }: BannerProps) {
           </div>
           <p className="text-[30px]">PROJECTS:</p>
 
-          <div className="flex flex-wrap gap-[20px] justify-center">
+          <div className="flex flex-wrap gap-[20px] justify-center ">
             {projects.map((project, index) => (
               <Tilt key={index}>
                 <div
